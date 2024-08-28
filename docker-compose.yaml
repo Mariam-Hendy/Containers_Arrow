@@ -1,0 +1,9 @@
+services:
+ database:
+   image: redis
+   ports:
+   - 3206:8080/tcp
+ web:
+   image: nginx
+   ports:
+   - 3204:80/tcp
