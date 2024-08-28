@@ -1,6 +1,6 @@
-FROM nginx:1.27.1
+FROM nginx
 RUN apt-get update && apt-get install -y
-SHELL ["/bin/bash", "-c"]
+EXPOSE 9090
 CMD ["echo","MariamHesham"]
 ENTRYPOINT ["echo", " First Image in Arrow"]
 
