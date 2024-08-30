@@ -5,10 +5,10 @@ services:
     restart: always
     ports:
       - "8081:80"
-  elasticsearch:
-    image: elasticsearch:7.16.1
-    container_name: es
-    ports:
-      - "9200:80"
+  web:     
+    build:
+      context: .       
+      dockerfile: Dockerfile
+
       
     
