@@ -5,7 +5,7 @@ services:
     restart: always
     ports:
       - "8081:80"
-webserver2:
+  webserver2:
     image: httpd:alpine
     container_name: webserver2
     restart: always
