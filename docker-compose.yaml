@@ -5,10 +5,13 @@ services:
     restart: always
     ports:
       - "8081:80"
-  webserver2:
-    image: httpd:alpine
-    container_name: webserver2
-    restart: always
+  elasticsearch:
+    image: elasticsearch:7.16.1
+    container_name: es
+    environment:
+      discovery.type: single-node
+      ES_JAVA_OPTS: "-Xms512m -Xmx512m"
     ports:
-      - "8082:80"
+      - "9200:80"
+      
     
